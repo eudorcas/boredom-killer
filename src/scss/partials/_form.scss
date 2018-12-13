@@ -1,0 +1,27 @@
+.form {
+  font-family: $font1;
+  &-header {
+    text-align: center;
+  }
+  &-type {
+    margin: 20px auto;
+    .type-buttons {
+      margin: 10px auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .type-button {
+        padding: 10px 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        font-family: $font1;
+        margin: 10px 5px;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

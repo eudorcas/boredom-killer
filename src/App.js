@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from "../src/components/Header";
+import Form  from "../src/components/Form";
 import './App.scss';
 import axios from "axios";
 const url = "http://www.boredapi.com/api/activity/";
@@ -41,6 +42,7 @@ class App extends Component {
     return (
       <div>
           <Header />
+          <Form />
 
       </div>
     );
