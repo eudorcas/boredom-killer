@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+  h1 {
+    display: inline-block;
+    font-size: 70px;
+    font-family: $font1;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      margin: 10px;
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

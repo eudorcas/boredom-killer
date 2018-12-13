@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import Header from "../src/components/Header";
+import './App.scss';
 import axios from "axios";
 const url = "http://www.boredapi.com/api/activity/";
 
@@ -39,8 +40,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.activity}</h1>
-        <p>{this.state.type}</p>
+          <Header />
+
       </div>
     );
   }
