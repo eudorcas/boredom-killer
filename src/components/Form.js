@@ -1,6 +1,7 @@
 import React from 'react';
 import FormType from './FormType';
 import FormParticipants from './FormParticipants';
+import FormPrice from './FormRanges';
 
 class Form extends React.Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class Form extends React.Component {
                 <form className={"form"}>
                     <FormType/>
                     <FormParticipants/>
+                    <FormPrice/>
                 </form>
             </div>
         )

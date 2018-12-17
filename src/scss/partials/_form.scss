@@ -1,29 +1,34 @@
 .form {
-  .button {
-    padding: 10px 15px;
-    border: 2px solid black;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    font-family: $font1;
-    margin: 5px 5px;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
+
   &-header {
-    font-family: $font1;
+
     text-align: center;
     font-size: 25px;
+  }
+  &-type,
+  &-participants,
+  &-ranges{
+    margin: 20px auto;
+
   }
   .buttons {
     margin: 10px auto;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    .button {
+      padding: 10px 15px;
+      border: 2px solid black;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px 5px;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
 
-    input {
-      visibility: hidden;
+    input[type="radio"] {
+      display: none;
     }
 
     #all:checked + label,
@@ -57,13 +62,35 @@
     [name="participants"]:checked + label {
       @include checkRadio(dodgerblue);
     }
+  }
 
+  input.slider {
+    width: 300px;
+    margin: 20px 10px;
+    appearance: none;
+    outline: none;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 10px;
+      height: 20px;
+      background: black;
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
 
   }
-  &-type {
-    margin: 20px auto;
-
+  &-ranges {
+    display: flex;
+    flex-wrap: wrap;
   }
+  &-price,
+  &-accessibility {
+    width: 50%;
+  };
+
 }
 

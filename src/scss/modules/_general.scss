@@ -1,3 +1,5 @@
+@import "variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,11 @@
 
 body {
   background-color: #fee12b;
+  font-family: $font1;
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
