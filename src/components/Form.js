@@ -7,13 +7,16 @@ class Form extends React.Component {
         super(props);
 
     }
+
     render() {
         return (
-            <div className={"form container"}>
+            <div className={"container"}>
                 <h2 className={"form-header"}>Pick your preferences or just don't pick anything and let me surprise
                     you!</h2>
-                <FormType />
-                <FormParticipants />
+                <form className={"form"}>
+                    <FormType/>
+                    <FormParticipants/>
+                </form>
             </div>
         )
     }
