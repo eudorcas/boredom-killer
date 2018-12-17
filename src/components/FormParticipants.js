@@ -1,37 +1,6 @@
 import React from 'react';
 
-class FormParticipants extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            participants: '',
-            active: null,
-
-        }
-    }
-    handleClick = (position, type) => {
-        if (this.state.active === position) {
-            this.setState({
-                participants: '',
-                active: null
-            })
-        }
-        else {
-            this.setState({
-
-                active: position
-            })
-        }
-    };
-
-    myColor = (position) => {
-        if (this.state.active === position) {
-            return "blue";
-        }
-        return "";
-    };
-
-    render() {
+const formParticipants = () =>  {
         return (
             <div className={"form-participants form-element"}>
                 <h3>Choose a number of people: </h3>
@@ -69,8 +38,8 @@ class FormParticipants extends React.Component {
                 </div>
             </div>
         )
-    }
-}
+
+};
 
 
-export default FormParticipants;
+export default formParticipants;
