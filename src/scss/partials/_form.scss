@@ -29,7 +29,9 @@
     }
 
     #all:checked + label,
-    #all-part:checked + label {
+    #all-part:checked + label,
+    #all-prices:checked + label,
+    #all-access:checked + label {
       @include checkRadio(black);
     }
 
@@ -59,6 +61,14 @@
     [name="participants"]:checked + label {
       @include checkRadio(dodgerblue);
     }
+
+    [name="prices"]:checked + label {
+      @include checkRadio(olive);
+    }
+
+    [name="accessibility"]:checked + label {
+      @include checkRadio(darkblue);
+    }
   }
 
   input.slider {
@@ -78,21 +88,9 @@
       border-radius: 5px;
     }
 
+  }
 
-  }
-  &-ranges {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &-price,
-  &-accessibility {
-    white-space: nowrap;
-    span,
-    [type="range"] {
-      display: inline;
-    }
-  }
-  &-submit{
+  &-submit {
     text-align: center;
     &-button {
       outline: none;
@@ -103,7 +101,7 @@
       color: #fee12b;
       font-family: $font1;
       font-size: 20px;
-      padding: 5px 15px;
+      padding: 10px 15px;
       cursor: pointer;
       &:hover {
         transform: scale(1.1);
@@ -111,9 +109,6 @@
 
     }
   }
-
-
-
 
 }
 

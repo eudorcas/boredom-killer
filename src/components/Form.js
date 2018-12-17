@@ -1,7 +1,8 @@
 import React from 'react';
 import FormType from './FormType';
 import FormParticipants from './FormParticipants';
-import FormRanges from './FormRanges';
+import FormPrice from './FormPrice';
+import FormAccessibility from './FormAccessibility';
 
 class Form extends React.Component {
     constructor(props) {
@@ -9,8 +10,10 @@ class Form extends React.Component {
         this.state = {
             type: '',
             participants: '',
-            price: '',
-            accessibility: ''
+            minPrice: '',
+            maxPrice: '',
+            minAccessibility: '',
+            maxAccessibility: ''
         }
 
     }
@@ -32,14 +35,56 @@ class Form extends React.Component {
         })
     }
     handlePrice(e) {
-        this.setState ({
-            price: e.currentTarget.value/10
-        })
+        if(e.currentTarget.value==="cheap") {
+            this.setState({
+                minPrice: "0",
+                maxPrice: "0.2"
+            })
+        }
+        else if (e.currentTarget.value==="normal") {
+            this.setState({
+                minPrice: "0.3",
+                maxPrice: "0.6"
+            })
+        }
+        else if (e.currentTarget.value==="expensive") {
+            this.setState ({
+                minPrice: "0.7",
+                maxPrice: "0.9"
+            })
+        }
+        else {
+            this.setState ({
+                minPrice: "",
+                maxPrice: ""
+            })
+        }
     }
     handleAccess(e) {
-        this.setState ({
-            accessibility: e.currentTarget.value/10
-        })
+        if(e.currentTarget.value==="common") {
+            this.setState({
+                minAccessibility: "0",
+                maxAccessibility: "0.2"
+            })
+        }
+        else if (e.currentTarget.value==="medium") {
+            this.setState({
+                minAccessibility: "0.3",
+                maxAccessibility: "0.6"
+            })
+        }
+        else if (e.currentTarget.value==="unique") {
+            this.setState ({
+                minAccessibility: "0.7",
+                maxAccessibility: "0.9"
+            })
+        }
+        else {
+            this.setState ({
+                minAccessibility: "",
+                maxAccessibility: ""
+            })
+        }
     }
     render() {
         return (
@@ -49,7 +94,8 @@ class Form extends React.Component {
                 <form onSubmit={e=>this.handleSubmit(e)} className={"form"}>
                     <FormType handleChange={e => this.handleType(e)}/>
                     <FormParticipants handleChange={e => this.handleParticipants(e)}/>
-                    <FormRanges handlePriceChange={e => this.handlePrice(e)} handleAccessChange={e => this.handleAccess(e)}/>
+                    <FormPrice handleChange={e => this.handlePrice(e)}/>
+                    <FormAccessibility handleChange={e => this.handleAccess(e)}/>
                     <div className={"form-submit form-element"}>
                         <input type={"submit"} value={"Kill the boredom!"} className={"form-submit-button"}></input>
                     </div>
