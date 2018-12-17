@@ -2,6 +2,7 @@ $font1:  'Share Tech Mono', monospace;
 $font2:  'Open Sans', sans-serif;
 
 @mixin checkRadio($color){
-  color: $color;
+  background-color: $color;
   border-color: $color;
+  color: #fee12b;
 }

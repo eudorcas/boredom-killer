@@ -36,30 +36,36 @@ class FormParticipants extends React.Component {
             <div className={"form-participants"}>
                 <h3>Choose a number of people: </h3>
                 <div className={"buttons"}>
-                    <div
-                        style={{color: this.myColor(0), borderColor: this.myColor(0)}}
-                        className={"button"}
-                        onClick={e => this.handleClick(0, "1")}>
+                    <input type={"radio"} id={"all-part"} name={"participants"} />
+                    <label
+                        htmlFor="all-part"
+                        className={"button"}>
+                        all
+                    </label>
+                    <input type={"radio"} id={"one"} name={"participants"} />
+                    <label
+                        htmlFor="one"
+                        className={"button"}>
                         one
-                    </div>
-                    <div
-                        style={{color: this.myColor(1), borderColor: this.myColor(1)}}
-                        className={"button"}
-                        onClick={e => this.handleClick(1, "2")}>
+                    </label>
+                    <input type={"radio"} id={"two"} name={"participants"} />
+                    <label
+                        htmlFor={"two"}
+                        className={"button"}>
                         two
-                    </div>
-                    <div
-                        style={{color: this.myColor(2), borderColor: this.myColor(2)}}
-                        className={"button"}
-                        onClick={e => this.handleClick(2, "3")}>
+                    </label>
+                    <input type={"radio"} id={"three"} name={"participants"} />
+                    <label
+                        htmlFor={"three"}
+                        className={"button"}>
                         three
-                    </div>
-                    <div
-                        style={{color: this.myColor(3), borderColor: this.myColor(3)}}
-                        className={"button"}
-                        onClick={e => this.handleClick(3, "4")}>
+                    </label>
+                    <input type={"radio"} id={"four"} name={"participants"} />
+                    <label
+                        htmlFor="four"
+                        className={"button"}>
                         four
-                    </div>
+                    </label>
                 </div>
             </div>
         )

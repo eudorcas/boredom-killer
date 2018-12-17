@@ -26,23 +26,23 @@
       visibility: hidden;
     }
 
-    #all:checked + .button {
-      background-color: black;
-      @include checkRadio(#fee12b);
+    #all:checked + label,
+    #all-part:checked + label {
+      @include checkRadio(black);
     }
 
-    #recreating:checked + .button {
+    #recreating:checked + label {
       @include checkRadio(purple);
 
     }
     #education:checked + label {
-      @include checkRadio(grey);
+      @include checkRadio(gray);
     }
     #relaxation:checked + label {
       @include checkRadio(green);
     }
     #social:checked + label {
-      @include checkRadio(plum);
+      @include checkRadio(deeppink);
     }
     #charity:checked + label {
       @include checkRadio(white);
@@ -53,6 +53,12 @@
     #cooking:checked + label {
       @include checkRadio(orange);
     }
+
+    [name="participants"]:checked + label {
+      @include checkRadio(dodgerblue);
+    }
+
+
 
   }
   &-type {
