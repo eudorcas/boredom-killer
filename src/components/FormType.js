@@ -2,7 +2,7 @@ import React from 'react';
 
 const formType = () => {
             return (
-                <div className={"form-type"}>
+                <div className={"form-type form-element"}>
                     <h3>Choose a type:</h3>
                     <div className={"buttons"}>
                         <input type={"radio"} id={"all"} name={"type"}/>

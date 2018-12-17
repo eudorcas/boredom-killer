@@ -1,14 +1,11 @@
 .form {
 
   &-header {
-
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
   }
-  &-type,
-  &-participants,
-  &-ranges{
-    margin: 20px auto;
+  &-element {
+    margin: 20px;
 
   }
   .buttons {
@@ -65,7 +62,7 @@
   }
 
   input.slider {
-    width: 300px;
+    width: 20em;
     margin: 20px 10px;
     appearance: none;
     outline: none;
@@ -89,8 +86,34 @@
   }
   &-price,
   &-accessibility {
-    width: 50%;
-  };
+    white-space: nowrap;
+    span,
+    [type="range"] {
+      display: inline;
+    }
+  }
+  &-submit{
+    text-align: center;
+    &-button {
+      outline: none;
+      background: black;
+      border: 3px solid black;
+      border-radius: 5px;
+      width: 40%;
+      color: #fee12b;
+      font-family: $font1;
+      font-size: 20px;
+      padding: 5px 15px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+    }
+  }
+
+
+
 
 }
 

@@ -18,6 +18,9 @@ class Form extends React.Component {
                     <FormType/>
                     <FormParticipants/>
                     <FormPrice/>
+                    <div className={"form-submit form-element"}>
+                        <input type={"submit"} value={"Kill the boredom!"} className={"form-submit-button"}></input>
+                    </div>
                 </form>
             </div>
         )

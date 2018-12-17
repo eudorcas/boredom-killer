@@ -33,7 +33,7 @@ class FormParticipants extends React.Component {
 
     render() {
         return (
-            <div className={"form-participants"}>
+            <div className={"form-participants form-element"}>
                 <h3>Choose a number of people: </h3>
                 <div className={"buttons"}>
                     <input type={"radio"} id={"all-part"} name={"participants"} />
