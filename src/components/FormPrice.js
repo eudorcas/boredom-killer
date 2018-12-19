@@ -1,44 +1,37 @@
 import React from 'react';
+import Button from '../components/Button';
 
+const prices = [
+    {id: "all-prices",
+    value: "",
+    text: "all"},
+    {id: "cheap",
+    value: "cheap",
+    text: "cheap"},
+    {id: "normal",
+    value: "normal",
+    text: "normal"},
+    {id: "expensive",
+    value: "expensive",
+    text: "expensive"}
+];
 const formPrice = (props) => {
+
+    const pricesList = prices.map(el=> {
+        return <Button key={el.id} handleChange={props.handleChange} id={el.id} name={"prices"} value={el.value} text={el.text} class={""}/>
+    });
 
     return (
 
             <div className={"form-price form-element"}>
                 <h3>Choose price: </h3>
                 <div className={"buttons"}>
-                    <input onChange={props.handleChange} type={"radio"} id={"all-prices"} name={"prices"} value={""} />
-                    <label
-                        htmlFor="all-prices"
-                        className={"button"}>
-                        all
-                    </label>
-                    <input onChange={props.handleChange} type={"radio"} id={"cheap"} name={"prices"} value={"cheap"}/>
-                    <label
-                        htmlFor="cheap"
-                        className={"button"}>
-                        cheap
-                    </label>
-                    <input onChange={props.handleChange} type={"radio"} id={"normal"} name={"prices"} value={"normal"}/>
-                    <label
-                        htmlFor={"normal"}
-                        className={"button"}>
-                        normal
-                    </label>
-                    <input onChange={props.handleChange} type={"radio"} id={"expensive"} name={"prices"} value={"expensive"}/>
-                    <label
-                        htmlFor={"expensive"}
-                        className={"button"}>
-                        expensive
-                    </label>
+                    {pricesList}
                 </div>
             </div>
-
-
     )
 
 
 };
-
 
 export default formPrice;
