@@ -17,11 +17,6 @@ class Form extends React.Component {
         }
 
     }
-    handleSubmit(e) {
-        e.preventDefault();
-
-
-    }
     handleType(e) {
         this.setState ({
             type: e.currentTarget.value
@@ -86,6 +81,10 @@ class Form extends React.Component {
             })
         }
     }
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.handleSubmit(this.state.type, this.state.participants, this.state.minPrice, this.state.maxPrice, this.state.minAccessibility, this.state.maxAccessibility);
+    };
     render() {
         return (
             <div className={"container"}>
@@ -97,7 +96,7 @@ class Form extends React.Component {
                     <FormPrice handleChange={e => this.handlePrice(e)}/>
                     <FormAccessibility handleChange={e => this.handleAccess(e)}/>
                     <div className={"form-submit form-element"}>
-                        <input type={"submit"} value={"Kill the boredom!"} className={"form-submit-button"}></input>
+                        <input onSubmit={e=>this.handleSubmit(e)} type={"submit"} value={"Kill the boredom!"} className={"form-submit-button"}/>
                     </div>
                 </form>
             </div>

@@ -10,32 +10,48 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activity: "",
-        type: ""
+        activity: "",
+        error: ""
+
     }
   }
 
-  componentDidMount() {
+  searchActivity =(type, participants, minPrice, maxPrice, minAccessibility, maxAccessibility ) => {
+
     axios({
         method:"get",
         url: url,
         params: {
-          type: "social",
+          type: type,
+          participants: participants,
+          minprice: minPrice,
+          maxprice: maxPrice,
+          minaccessibility: minAccessibility,
+          maxaccessibility: maxAccessibility
 
         }
     })
         .then(res=> {
-          this.setState({
-              activity: res.data.activity,
-              type: res.data.type
-          })
-        })
-        .catch(res=>{
-          this.setState({
-              activity: res.data
-          })
-        })
-  }
+            if ("activity" in res.data) {
+                console.log("jest");
+                this.setState({
+                    activity: res.data.activity,
+                    error: ''
+                })
+            }
+            else {
+                console.log(res.data.error);
+                this.setState({
+                    error: res.data.error,
+                    activity: ''
+                })
+            }
+
+        });
+
+
+
+  };
 
 
 
@@ -43,8 +59,8 @@ class App extends Component {
     return (
       <div>
           <Header />
-          <Form />
-          <Board />
+          <Form handleSubmit={this.searchActivity}/>
+          <Board text={this.state.activity + this.state.error}/>
 
       </div>
     );
