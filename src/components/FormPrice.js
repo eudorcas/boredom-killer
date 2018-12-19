@@ -5,7 +5,7 @@ const formPrice = (props) => {
     return (
 
             <div className={"form-price form-element"}>
-                <h3>Choose a price: </h3>
+                <h3>Choose price: </h3>
                 <div className={"buttons"}>
                     <input onChange={props.handleChange} type={"radio"} id={"all-prices"} name={"prices"} value={""} />
                     <label

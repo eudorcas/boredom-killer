@@ -5,7 +5,7 @@ const formAccessibility = (props) => {
     return (
 
         <div className={"form-accessibility form-element"}>
-            <h3>Choose an accessibility: </h3>
+            <h3>Choose accessibility: </h3>
             <div className={"buttons"}>
                 <input onChange={props.handleChange} type={"radio"} id={"all-access"} name={"accessibility"} value={""} />
                 <label

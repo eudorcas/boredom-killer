@@ -12,84 +12,8 @@
     margin: 10px auto;
     display: flex;
     flex-wrap: wrap;
-    .button {
-      padding: 10px 15px;
-      border: 2px solid black;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 5px 5px;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-
-    input[type="radio"] {
-      display: none;
-    }
-
-    #all:checked + label,
-    #all-part:checked + label,
-    #all-prices:checked + label,
-    #all-access:checked + label {
-      @include checkRadio(black);
-    }
-
-    #recreating:checked + label {
-      @include checkRadio(purple);
-
-    }
-    #education:checked + label {
-      @include checkRadio(gray);
-    }
-    #relaxation:checked + label {
-      @include checkRadio(green);
-    }
-    #social:checked + label {
-      @include checkRadio(deeppink);
-    }
-    #charity:checked + label {
-      @include checkRadio(white);
-    }
-    #busywork:checked + label {
-      @include checkRadio(red);
-    }
-    #cooking:checked + label {
-      @include checkRadio(orange);
-    }
-
-    [name="participants"]:checked + label {
-      @include checkRadio(dodgerblue);
-    }
-
-    [name="prices"]:checked + label {
-      @include checkRadio(olive);
-    }
-
-    [name="accessibility"]:checked + label {
-      @include checkRadio(darkblue);
-    }
-  }
-
-  input.slider {
-    width: 20em;
-    margin: 20px 10px;
-    appearance: none;
-    outline: none;
-    height: 3px;
-    background: black;
-    border-radius: 5px;
-    &::-webkit-slider-thumb {
-      appearance: none;
-      width: 10px;
-      height: 20px;
-      background: black;
-      cursor: pointer;
-      border-radius: 5px;
-    }
 
   }
-
   &-submit {
     text-align: center;
     &-button {
