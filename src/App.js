@@ -11,12 +11,19 @@ class App extends Component {
     super(props);
     this.state = {
         activity: "",
-        error: ""
+        error: "",
+        loading: false
 
     }
   }
 
   searchActivity =(type, participants, minPrice, maxPrice, minAccessibility, maxAccessibility ) => {
+
+    this.setState({
+          loading: true,
+          activity: '',
+          error: ''
+    });
 
     axios({
         method:"get",
@@ -36,14 +43,16 @@ class App extends Component {
                 console.log("jest");
                 this.setState({
                     activity: res.data.activity,
-                    error: ''
+                    error: '',
+                    loading: false
                 })
             }
             else {
                 console.log(res.data.error);
                 this.setState({
                     error: res.data.error,
-                    activity: ''
+                    activity: '',
+                    loading: false
                 })
             }
 
@@ -60,7 +69,7 @@ class App extends Component {
       <div>
           <Header />
           <Form handleSubmit={this.searchActivity}/>
-          <Board text={this.state.activity + this.state.error}/>
+          <Board text={this.state.activity + this.state.error} loading={this.state.loading}/>
 
       </div>
     );
