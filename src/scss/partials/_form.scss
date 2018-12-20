@@ -2,11 +2,21 @@
 
   &-header {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
+    margin: 0 20px;
+    @media #{$desktop} {
+      font-size: 20px;
+    }
   }
   &-element {
     margin: 20px;
 
+  }
+  h3{
+    font-size: 15px;
+    @media #{$desktop} {
+      font-size: 18px;
+    }
   }
   .buttons {
     margin: 10px auto;
@@ -21,14 +31,22 @@
       background: black;
       border: 3px solid black;
       border-radius: 5px;
-      width: 40%;
+      width: 70%;
       color: #fee12b;
       font-family: $font1;
-      font-size: 20px;
+      font-size: 14px;
       padding: 10px 15px;
       cursor: pointer;
       &:hover {
         transform: scale(1.1);
+      }
+      @media #{$tablet} {
+        width:  40%;
+        font-size: 16px;
+      }
+      @media #{$desktop} {
+        font-size: 20px;
+
       }
 
     }

@@ -21,7 +21,7 @@ input[type="radio"] {
   @include checkRadio(black);
 }
 
-#recreating:checked + label {
+#recreational:checked + label {
   @include checkRadio(purple);
 
 }

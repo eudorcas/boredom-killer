@@ -1,6 +1,9 @@
 $font1:  'Share Tech Mono', monospace;
 $font2:  'Open Sans', sans-serif;
 
+$tablet: only screen and (min-width: 520px);
+$desktop: only screen and (min-width: 695px);
+
 @mixin checkRadio($color){
   background-color: $color;
   border-color: $color;

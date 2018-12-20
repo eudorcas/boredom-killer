@@ -4,14 +4,36 @@
   padding: 25px 0;
   h1 {
     display: inline-block;
-    font-size: 60px;
+    font-size: 25px;
     position: relative;
+    @media only screen and (min-width: 385px) {
+      font-size: 35px;
+    }
+    @media #{$tablet} {
+      font-size: 50px;
+    }
+    @media #{$desktop} {
+    font-size: 60px;
+  }
     img {
       position: absolute;
       top: 0;
-      margin: 10px;
+      margin: 7px;
+      width: 25px;
+      height: 25px;
+      @media only screen and (min-width: 385px) {
+        margin: 10px;
+        width: 35px;
+        height: 35px;
+      }
+      @media #{$tablet} {
+        width: 50px;
+        height: 50px;
+      }
+      @media #{$desktop} {
       width: 60px;
       height: 60px;
+    }
     }
   }
 }
