@@ -4,7 +4,7 @@ import img from "../img/gun.png";
 const header = () => {
     return <div className={"header"}>
         <h1>Boredom Killer
-            <img src={img} alt="gun"/>
+            <img src={img} alt="gun-icon"/>
         </h1>
 
     </div>
