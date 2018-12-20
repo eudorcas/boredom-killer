@@ -1,5 +1,5 @@
 # boredom-killer
-Boredom Killer - web app built with React, searching for boredom-killer-activities.
+Boredom Killer - web app built with React, searching for boredom-killing-activities.
 
 ![boredom-killer-screen](screens/boredom-killer-screen.png)
 
