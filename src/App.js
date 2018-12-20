@@ -4,7 +4,7 @@ import Form  from "../src/components/Form";
 import Board from "../src/components/Board";
 import './App.scss';
 import axios from "axios";
-const url = "http://www.boredapi.com/api/activity/";
+const url = "https://www.boredapi.com/api/activity/";
 
 class App extends Component {
   constructor(props) {
