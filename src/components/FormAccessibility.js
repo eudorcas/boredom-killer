@@ -2,24 +2,33 @@ import React from 'react';
 import Button from '../components/Button';
 
 const access = [
-    {value: "",
+    {
+        value: "",
         id: "all-access",
-        text: "all"},
-    {value: "common",
+        text: "all"
+    },
+    {
+        value: "common",
         id: "common",
-        text: "common"},
-    {value: "medium",
-    id: "medium",
-    text: "medium"},
-    {value: "unique",
+        text: "common"
+    },
+    {
+        value: "medium",
+        id: "medium",
+        text: "medium"
+    },
+    {
+        value: "unique",
         id: "unique",
-        text: "unique"}
+        text: "unique"
+    }
 ];
 
 const formAccessibility = (props) => {
 
     const accessList = access.map(el => {
-       return <Button key={el.id} handleChange={props.handleChange} id={el.id} name={"accessibility"} value={el.value} text={el.text} class={""}/>
+        return <Button key={el.id} handleChange={props.handleChange} id={el.id} name={"accessibility"} value={el.value}
+                       text={el.text} class={""}/>
     });
 
     return (
