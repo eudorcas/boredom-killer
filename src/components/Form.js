@@ -45,12 +45,6 @@ class Form extends React.Component {
                 maxPrice: "0.6"
             })
         }
-        else if (e.currentTarget.value === "expensive") {
-            this.setState({
-                minPrice: "0.7",
-                maxPrice: "0.9"
-            })
-        }
         else {
             this.setState({
                 minPrice: "",
@@ -72,12 +66,7 @@ class Form extends React.Component {
                 maxAccessibility: "0.6"
             })
         }
-        else if (e.currentTarget.value === "unique") {
-            this.setState({
-                minAccessibility: "0.7",
-                maxAccessibility: "0.9"
-            })
-        }
+
         else {
             this.setState({
                 minAccessibility: "",

@@ -40,7 +40,6 @@ class App extends Component {
     })
         .then(res=> {
             if ("activity" in res.data) {
-                console.log("jest");
                 this.setState({
                     activity: res.data.activity,
                     error: '',
@@ -48,7 +47,6 @@ class App extends Component {
                 })
             }
             else {
-                console.log(res.data.error);
                 this.setState({
                     error: res.data.error,
                     activity: '',

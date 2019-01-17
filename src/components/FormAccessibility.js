@@ -16,11 +16,6 @@ const access = [
         value: "medium",
         id: "medium",
         text: "medium"
-    },
-    {
-        value: "unique",
-        id: "unique",
-        text: "unique"
     }
 ];
 

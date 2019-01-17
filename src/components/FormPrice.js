@@ -16,11 +16,6 @@ const prices = [
         id: "normal",
         value: "normal",
         text: "normal"
-    },
-    {
-        id: "expensive",
-        value: "expensive",
-        text: "expensive"
     }
 ];
 const formPrice = (props) => {
